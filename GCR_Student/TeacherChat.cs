@@ -10,18 +10,18 @@ using System.Windows.Forms;
 
 namespace GCR_Student
 {
-    public partial class StudentChat : Form
+    public partial class TeacherChat : Form
     {
-        public StudentChat()
+        public TeacherChat()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            StudentPanel sp = new StudentPanel();
+            TeacherPanel tp = new TeacherPanel();
             this.Hide();
-            sp.Show();
+            tp.Show();
         }
     }
 }

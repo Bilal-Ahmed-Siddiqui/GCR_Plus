@@ -40,6 +40,8 @@ namespace GCR_Student
             this.label4 = new System.Windows.Forms.Label();
             this.btn_Next = new System.Windows.Forms.Button();
             this.btn_previous = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btn_logout = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -53,7 +55,7 @@ namespace GCR_Student
             // 
             // btn_AddStudents
             // 
-            this.btn_AddStudents.Location = new System.Drawing.Point(664, 17);
+            this.btn_AddStudents.Location = new System.Drawing.Point(664, 123);
             this.btn_AddStudents.Name = "btn_AddStudents";
             this.btn_AddStudents.Size = new System.Drawing.Size(124, 55);
             this.btn_AddStudents.TabIndex = 9;
@@ -63,7 +65,7 @@ namespace GCR_Student
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(664, 136);
+            this.button1.Location = new System.Drawing.Point(664, 242);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(124, 55);
             this.button1.TabIndex = 10;
@@ -151,12 +153,34 @@ namespace GCR_Student
             this.btn_previous.UseVisualStyleBackColor = true;
             this.btn_previous.Click += new System.EventHandler(this.btn_previous_Click);
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(664, 361);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(124, 55);
+            this.button2.TabIndex = 28;
+            this.button2.Text = "Chat With Students";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btn_logout
+            // 
+            this.btn_logout.Location = new System.Drawing.Point(664, 12);
+            this.btn_logout.Name = "btn_logout";
+            this.btn_logout.Size = new System.Drawing.Size(124, 55);
+            this.btn_logout.TabIndex = 29;
+            this.btn_logout.Text = "Log Out";
+            this.btn_logout.UseVisualStyleBackColor = true;
+            this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
+            // 
             // TeacherPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_logout);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.btn_previous);
             this.Controls.Add(this.btn_Next);
             this.Controls.Add(this.label2);
@@ -189,5 +213,7 @@ namespace GCR_Student
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btn_Next;
         private System.Windows.Forms.Button btn_previous;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_logout;
     }
 }

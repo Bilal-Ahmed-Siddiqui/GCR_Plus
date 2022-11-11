@@ -38,6 +38,8 @@ namespace GCR_Student
             this.lbl_Title = new System.Windows.Forms.Label();
             this.lbl_Description = new System.Windows.Forms.Label();
             this.lbl_Datetime = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btn_logout = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -123,11 +125,33 @@ namespace GCR_Student
             this.lbl_Datetime.TabIndex = 21;
             this.lbl_Datetime.Text = "date time";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(652, 242);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(124, 55);
+            this.button1.TabIndex = 27;
+            this.button1.Text = "Chat With Teacher";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btn_logout
+            // 
+            this.btn_logout.Location = new System.Drawing.Point(664, 12);
+            this.btn_logout.Name = "btn_logout";
+            this.btn_logout.Size = new System.Drawing.Size(124, 55);
+            this.btn_logout.TabIndex = 30;
+            this.btn_logout.Text = "Log Out";
+            this.btn_logout.UseVisualStyleBackColor = true;
+            this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
+            // 
             // StudentPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_logout);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_previous);
             this.Controls.Add(this.btn_Next);
             this.Controls.Add(this.label2);
@@ -157,5 +181,7 @@ namespace GCR_Student
         private System.Windows.Forms.Label lbl_Title;
         private System.Windows.Forms.Label lbl_Description;
         private System.Windows.Forms.Label lbl_Datetime;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_logout;
     }
 }

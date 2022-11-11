@@ -62,5 +62,19 @@ namespace GCR_Student
             lbl_Description.Text = p1.description.ToString();
             lbl_Datetime.Text = p1.dt.ToString();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            StudentChat sc = new StudentChat();
+            this.Hide();
+            sc.Show();
+        }
+
+        private void btn_logout_Click(object sender, EventArgs e)
+        {
+            Login l = new Login();
+            this.Hide();
+            l.Show();
+        }
     }
 }

@@ -72,12 +72,24 @@
     <Compile Include="Posts.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StudentChat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentChat.Designer.cs">
+      <DependentUpon>StudentChat.cs</DependentUpon>
+    </Compile>
     <Compile Include="Students.cs" />
     <Compile Include="StudentPanel.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="StudentPanel.Designer.cs">
       <DependentUpon>StudentPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherChat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherChat.Designer.cs">
+      <DependentUpon>TeacherChat.cs</DependentUpon>
     </Compile>
     <Compile Include="TeacherPanel.cs">
       <SubType>Form</SubType>
@@ -104,8 +116,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="StudentChat.resx">
+      <DependentUpon>StudentChat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StudentPanel.resx">
       <DependentUpon>StudentPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherChat.resx">
+      <DependentUpon>TeacherChat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TeacherPanel.resx">
       <DependentUpon>TeacherPanel.cs</DependentUpon>

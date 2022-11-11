@@ -18,11 +18,6 @@ namespace GCR_Student
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-           
-        }
-
         private void btn_AddStudents_Click(object sender, EventArgs e)
         {
             AddStudent ad = new AddStudent();
@@ -111,6 +106,20 @@ namespace GCR_Student
         private void lbl_Datetime_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            TeacherChat tc = new TeacherChat();
+            this.Hide();
+            tc.Show();
+        }
+
+        private void btn_logout_Click(object sender, EventArgs e)
+        {
+            Login l = new Login();
+            this.Hide();
+            l.Show();
         }
     }
 }

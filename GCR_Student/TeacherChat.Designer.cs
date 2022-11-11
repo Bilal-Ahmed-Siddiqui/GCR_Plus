@@ -1,7 +1,7 @@
 ﻿
 namespace GCR_Student
 {
-    partial class StudentChat
+    partial class TeacherChat
     {
         /// <summary>
         /// Required designer variable.
@@ -29,69 +29,69 @@ namespace GCR_Student
         /// </summary>
         private void InitializeComponent()
         {
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btn_send = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox3
+            // button2
             // 
-            this.textBox3.Location = new System.Drawing.Point(12, 314);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(222, 60);
-            this.textBox3.TabIndex = 10;
-            this.textBox3.Text = "Write A Message";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(12, 71);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(327, 237);
-            this.textBox1.TabIndex = 7;
-            // 
-            // btn_send
-            // 
-            this.btn_send.Location = new System.Drawing.Point(240, 314);
-            this.btn_send.Name = "btn_send";
-            this.btn_send.Size = new System.Drawing.Size(99, 60);
-            this.btn_send.TabIndex = 6;
-            this.btn_send.Text = "Send";
-            this.btn_send.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(127, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 13);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Chat With Teacher";
+            this.button2.Location = new System.Drawing.Point(12, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(99, 60);
+            this.button2.TabIndex = 19;
+            this.button2.Text = "Start";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(240, 6);
+            this.button1.Location = new System.Drawing.Point(240, 13);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(99, 60);
-            this.button1.TabIndex = 12;
+            this.button1.TabIndex = 18;
             this.button1.Text = "Back";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // label1
             // 
-            this.button2.Location = new System.Drawing.Point(12, 5);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(99, 60);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Start";
-            this.button2.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(127, 37);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(97, 13);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Chat With Teacher";
             // 
-            // StudentChat
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(12, 321);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(222, 60);
+            this.textBox3.TabIndex = 16;
+            this.textBox3.Text = "Write A Message";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(12, 78);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(327, 237);
+            this.textBox1.TabIndex = 15;
+            // 
+            // btn_send
+            // 
+            this.btn_send.Location = new System.Drawing.Point(240, 321);
+            this.btn_send.Name = "btn_send";
+            this.btn_send.Size = new System.Drawing.Size(99, 60);
+            this.btn_send.TabIndex = 14;
+            this.btn_send.Text = "Send";
+            this.btn_send.UseVisualStyleBackColor = true;
+            // 
+            // TeacherChat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -102,8 +102,8 @@ namespace GCR_Student
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btn_send);
-            this.Name = "StudentChat";
-            this.Text = "StudentChat";
+            this.Name = "TeacherChat";
+            this.Text = "TeacherChat";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -111,11 +111,11 @@ namespace GCR_Student
 
         #endregion
 
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btn_send;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
     }
 }
