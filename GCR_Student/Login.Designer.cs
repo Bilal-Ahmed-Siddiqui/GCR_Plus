@@ -102,6 +102,7 @@ namespace GCR_Student
             // 
             // cmb_Login
             // 
+            this.cmb_Login.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_Login.FormattingEnabled = true;
             this.cmb_Login.Items.AddRange(new object[] {
             "Teacher",

@@ -34,6 +34,8 @@ namespace GCR_Student
                 p1.Insert(p1);
 
                 MessageBox.Show("Published!!");
+                txt_Description.Text = "";
+                txt_Title.Text = "";
             }
             else
             {

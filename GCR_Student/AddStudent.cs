@@ -27,6 +27,8 @@ namespace GCR_Student
                 s1.Insert(s1);
 
                 MessageBox.Show("Student Addded Successfully");
+                txt_Name.Text = "";
+                txt_Password.Text = "";
             }
             else
             {
