@@ -29,58 +29,61 @@ namespace GCR_Student
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_Start = new System.Windows.Forms.Button();
+            this.btn_Back = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_Msg = new System.Windows.Forms.TextBox();
+            this.txt_Chat = new System.Windows.Forms.TextBox();
             this.btn_send = new System.Windows.Forms.Button();
+            this.cmbx_StudentList = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button2
+            // btn_Start
             // 
-            this.button2.Location = new System.Drawing.Point(12, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(99, 60);
-            this.button2.TabIndex = 19;
-            this.button2.Text = "Start";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_Start.Location = new System.Drawing.Point(240, 12);
+            this.btn_Start.Name = "btn_Start";
+            this.btn_Start.Size = new System.Drawing.Size(99, 60);
+            this.btn_Start.TabIndex = 19;
+            this.btn_Start.Text = "Start";
+            this.btn_Start.UseVisualStyleBackColor = true;
+            this.btn_Start.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // btn_Back
             // 
-            this.button1.Location = new System.Drawing.Point(240, 13);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(99, 60);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Back";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_Back.Location = new System.Drawing.Point(12, 12);
+            this.btn_Back.Name = "btn_Back";
+            this.btn_Back.Size = new System.Drawing.Size(99, 60);
+            this.btn_Back.TabIndex = 18;
+            this.btn_Back.Text = "Back";
+            this.btn_Back.UseVisualStyleBackColor = true;
+            this.btn_Back.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(127, 37);
+            this.label1.Location = new System.Drawing.Point(130, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 13);
+            this.label1.Size = new System.Drawing.Size(94, 13);
             this.label1.TabIndex = 17;
-            this.label1.Text = "Chat With Teacher";
+            this.label1.Text = "Chat With Student";
             // 
-            // textBox3
+            // txt_Msg
             // 
-            this.textBox3.Location = new System.Drawing.Point(12, 321);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(222, 60);
-            this.textBox3.TabIndex = 16;
-            this.textBox3.Text = "Write A Message";
+            this.txt_Msg.Location = new System.Drawing.Point(12, 321);
+            this.txt_Msg.Multiline = true;
+            this.txt_Msg.Name = "txt_Msg";
+            this.txt_Msg.Size = new System.Drawing.Size(222, 60);
+            this.txt_Msg.TabIndex = 16;
+            this.txt_Msg.Text = "Write A Message";
             // 
-            // textBox1
+            // txt_Chat
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 78);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(327, 237);
-            this.textBox1.TabIndex = 15;
+            this.txt_Chat.Location = new System.Drawing.Point(12, 78);
+            this.txt_Chat.Multiline = true;
+            this.txt_Chat.Name = "txt_Chat";
+            this.txt_Chat.Size = new System.Drawing.Size(222, 237);
+            this.txt_Chat.TabIndex = 15;
             // 
             // btn_send
             // 
@@ -90,17 +93,38 @@ namespace GCR_Student
             this.btn_send.TabIndex = 14;
             this.btn_send.Text = "Send";
             this.btn_send.UseVisualStyleBackColor = true;
+            this.btn_send.Click += new System.EventHandler(this.btn_send_Click);
+            // 
+            // cmbx_StudentList
+            // 
+            this.cmbx_StudentList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbx_StudentList.FormattingEnabled = true;
+            this.cmbx_StudentList.Location = new System.Drawing.Point(240, 103);
+            this.cmbx_StudentList.Name = "cmbx_StudentList";
+            this.cmbx_StudentList.Size = new System.Drawing.Size(99, 21);
+            this.cmbx_StudentList.TabIndex = 20;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(260, 87);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 13);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "Student list";
             // 
             // TeacherChat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.cmbx_StudentList);
+            this.Controls.Add(this.btn_Start);
+            this.Controls.Add(this.btn_Back);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_Msg);
+            this.Controls.Add(this.txt_Chat);
             this.Controls.Add(this.btn_send);
             this.Name = "TeacherChat";
             this.Text = "TeacherChat";
@@ -111,11 +135,13 @@ namespace GCR_Student
 
         #endregion
 
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_Start;
+        private System.Windows.Forms.Button btn_Back;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_Msg;
+        private System.Windows.Forms.TextBox txt_Chat;
         private System.Windows.Forms.Button btn_send;
+        private System.Windows.Forms.ComboBox cmbx_StudentList;
+        private System.Windows.Forms.Label label2;
     }
 }
