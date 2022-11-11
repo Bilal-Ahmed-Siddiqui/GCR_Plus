@@ -79,6 +79,7 @@ namespace GCR_Student
             this.lbl_Title.Size = new System.Drawing.Size(27, 13);
             this.lbl_Title.TabIndex = 11;
             this.lbl_Title.Text = "Title";
+            this.lbl_Title.Click += new System.EventHandler(this.lbl_Title_Click);
             // 
             // lbl_Description
             // 
@@ -98,6 +99,7 @@ namespace GCR_Student
             this.lbl_Datetime.Size = new System.Drawing.Size(50, 13);
             this.lbl_Datetime.TabIndex = 13;
             this.lbl_Datetime.Text = "date time";
+            this.lbl_Datetime.Click += new System.EventHandler(this.lbl_Datetime_Click);
             // 
             // label2
             // 
@@ -107,6 +109,7 @@ namespace GCR_Student
             this.label2.Size = new System.Drawing.Size(27, 13);
             this.label2.TabIndex = 14;
             this.label2.Text = "Title";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -116,6 +119,7 @@ namespace GCR_Student
             this.label3.Size = new System.Drawing.Size(60, 13);
             this.label3.TabIndex = 15;
             this.label3.Text = "Description";
+            this.label3.Click += new System.EventHandler(this.label3_Click_1);
             // 
             // label4
             // 
@@ -125,6 +129,7 @@ namespace GCR_Student
             this.label4.Size = new System.Drawing.Size(50, 13);
             this.label4.TabIndex = 16;
             this.label4.Text = "date time";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // btn_Next
             // 
