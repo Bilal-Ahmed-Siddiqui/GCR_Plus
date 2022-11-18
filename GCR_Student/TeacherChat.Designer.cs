@@ -41,7 +41,7 @@ namespace GCR_Student
             // 
             // btn_Start
             // 
-            this.btn_Start.Location = new System.Drawing.Point(240, 12);
+            this.btn_Start.Location = new System.Drawing.Point(12, 12);
             this.btn_Start.Name = "btn_Start";
             this.btn_Start.Size = new System.Drawing.Size(99, 60);
             this.btn_Start.TabIndex = 19;
@@ -51,7 +51,7 @@ namespace GCR_Student
             // 
             // btn_Back
             // 
-            this.btn_Back.Location = new System.Drawing.Point(12, 12);
+            this.btn_Back.Location = new System.Drawing.Point(238, 12);
             this.btn_Back.Name = "btn_Back";
             this.btn_Back.Size = new System.Drawing.Size(99, 60);
             this.btn_Back.TabIndex = 18;
@@ -117,7 +117,7 @@ namespace GCR_Student
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(349, 391);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cmbx_StudentList);
             this.Controls.Add(this.btn_Start);
@@ -127,6 +127,7 @@ namespace GCR_Student
             this.Controls.Add(this.txt_Chat);
             this.Controls.Add(this.btn_send);
             this.Name = "TeacherChat";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TeacherChat";
             this.ResumeLayout(false);
             this.PerformLayout();

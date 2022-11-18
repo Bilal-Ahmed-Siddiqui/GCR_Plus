@@ -113,6 +113,7 @@ namespace GCR_Student
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_Back);
             this.Name = "MakeAnnoucement";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MakeAnnoucement";
             this.ResumeLayout(false);
             this.PerformLayout();

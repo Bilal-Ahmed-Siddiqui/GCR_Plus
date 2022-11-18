@@ -193,6 +193,7 @@ namespace GCR_Student
             this.Controls.Add(this.btn_AddStudents);
             this.Controls.Add(this.label1);
             this.Name = "TeacherPanel";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TeacherPanel";
             this.Load += new System.EventHandler(this.TeacherPanel_Load);
             this.ResumeLayout(false);

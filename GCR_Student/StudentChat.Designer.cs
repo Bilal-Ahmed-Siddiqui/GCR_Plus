@@ -39,7 +39,7 @@ namespace GCR_Student
             // 
             // txt_Msg
             // 
-            this.txt_Msg.Location = new System.Drawing.Point(12, 314);
+            this.txt_Msg.Location = new System.Drawing.Point(10, 320);
             this.txt_Msg.Multiline = true;
             this.txt_Msg.Name = "txt_Msg";
             this.txt_Msg.Size = new System.Drawing.Size(222, 60);
@@ -48,7 +48,7 @@ namespace GCR_Student
             // 
             // txt_Chat
             // 
-            this.txt_Chat.Location = new System.Drawing.Point(12, 71);
+            this.txt_Chat.Location = new System.Drawing.Point(10, 77);
             this.txt_Chat.Multiline = true;
             this.txt_Chat.Name = "txt_Chat";
             this.txt_Chat.Size = new System.Drawing.Size(327, 237);
@@ -56,7 +56,7 @@ namespace GCR_Student
             // 
             // btn_send
             // 
-            this.btn_send.Location = new System.Drawing.Point(240, 314);
+            this.btn_send.Location = new System.Drawing.Point(238, 320);
             this.btn_send.Name = "btn_send";
             this.btn_send.Size = new System.Drawing.Size(99, 60);
             this.btn_send.TabIndex = 6;
@@ -67,7 +67,7 @@ namespace GCR_Student
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(127, 30);
+            this.label1.Location = new System.Drawing.Point(125, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 13);
             this.label1.TabIndex = 11;
@@ -75,7 +75,7 @@ namespace GCR_Student
             // 
             // btn_Back
             // 
-            this.btn_Back.Location = new System.Drawing.Point(240, 6);
+            this.btn_Back.Location = new System.Drawing.Point(238, 12);
             this.btn_Back.Name = "btn_Back";
             this.btn_Back.Size = new System.Drawing.Size(99, 60);
             this.btn_Back.TabIndex = 12;
@@ -85,7 +85,7 @@ namespace GCR_Student
             // 
             // btn_Start
             // 
-            this.btn_Start.Location = new System.Drawing.Point(12, 5);
+            this.btn_Start.Location = new System.Drawing.Point(10, 11);
             this.btn_Start.Name = "btn_Start";
             this.btn_Start.Size = new System.Drawing.Size(99, 60);
             this.btn_Start.TabIndex = 13;
@@ -97,7 +97,7 @@ namespace GCR_Student
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(349, 387);
             this.Controls.Add(this.btn_Start);
             this.Controls.Add(this.btn_Back);
             this.Controls.Add(this.label1);
@@ -105,6 +105,7 @@ namespace GCR_Student
             this.Controls.Add(this.txt_Chat);
             this.Controls.Add(this.btn_send);
             this.Name = "StudentChat";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StudentChat";
             this.ResumeLayout(false);
             this.PerformLayout();

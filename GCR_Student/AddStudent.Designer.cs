@@ -112,6 +112,7 @@ namespace GCR_Student
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Name = "AddStudent";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddStudent";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -10,7 +10,9 @@ namespace GCR_Student
 {
     class Connection
     {
-        static string constr = @"Data Source=BILAL-PC\SQLEXPRESS;Initial Catalog=GCR;Integrated Security=True";
+        //static string constr = @"Data Source=BILAL-PC\SQLEXPRESS;Initial Catalog=GCR;Integrated Security=True";
+        static string constr = @"Data Source=sql.bsite.net\MSSQL2016;Initial Catalog=bilalahmedsiddiqui_;User Id=bilalahmedsiddiqui_;Password=iamdoingbscs123;";
+
         static SqlConnection con;
 
 
