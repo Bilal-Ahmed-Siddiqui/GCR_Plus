@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace GCR_Student
 {
@@ -30,33 +31,51 @@ namespace GCR_Student
             {
                 if (cmb_Login.Text == "Teacher")
                 {
-                    Teachers t1 = new Teachers();
-                    bool exist = t1.Find(txt_Name.Text, txt_Password.Text);
-                    if (exist)
+                    if (!Regex.IsMatch(txt_Name.Text, @"^[a-zA-Z]+$"))
                     {
-                        TeacherPanel tp = new TeacherPanel();
-                        this.Hide();
-                        tp.Show();
+                        MessageBox.Show("User Name Can only contain Alphabets", "Invalid");
+                        txt_Name.Text = "";
+                        txt_Name.Focus();
                     }
                     else
                     {
-                        MessageBox.Show("Wrong Name or password");
+                        Teachers t1 = new Teachers();
+                        bool exist = t1.Find(txt_Name.Text, txt_Password.Text);
+                        if (exist)
+                        {
+                            TeacherPanel tp = new TeacherPanel();
+                            this.Hide();
+                            tp.Show();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Wrong Name or password");
+                        }
                     }
                 }
 
                 else
                 {
-                    Students s1 = new Students();
-                    bool exist = s1.Find(txt_Name.Text, txt_Password.Text);
-                    if (exist)
+                    if (!Regex.IsMatch(txt_Name.Text, @"^[a-zA-Z]+$"))
                     {
-                        StudentPanel sp = new StudentPanel();
-                        this.Hide();
-                        sp.Show();
+                        MessageBox.Show("User Name Can only contain Alphabets", "Invalid");
+                        txt_Name.Text = "";
+                        txt_Name.Focus();
                     }
                     else
                     {
-                        MessageBox.Show("Wrong Name or password");
+                        Students s1 = new Students();
+                        bool exist = s1.Find(txt_Name.Text, txt_Password.Text);
+                        if (exist)
+                        {
+                            StudentPanel sp = new StudentPanel();
+                            this.Hide();
+                            sp.Show();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Wrong Name or password");
+                        }
                     }
                 }
             }

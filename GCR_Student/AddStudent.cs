@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
+
 
 namespace GCR_Student
 {
@@ -21,14 +23,22 @@ namespace GCR_Student
         {
             if (txt_Name.Text != "" && txt_Password.Text != "")
             {
-                Students s1 = new Students();
-                s1.Sname = txt_Name.Text;
-                s1.Spassword = txt_Password.Text;
-                s1.Insert(s1);
-
-                MessageBox.Show("Student Addded Successfully");
-                txt_Name.Text = "";
-                txt_Password.Text = "";
+                if (!Regex.IsMatch(txt_Name.Text, @"^[a-zA-Z]+$"))
+                {
+                    MessageBox.Show("User Name Can only contain Alphabets", "Invalid");
+                    txt_Name.Text = "";
+                    txt_Name.Focus();
+                }
+                else
+                {
+                    Students s1 = new Students();
+                    s1.Sname = txt_Name.Text;
+                    s1.Spassword = txt_Password.Text;
+                    s1.Insert(s1);
+                    MessageBox.Show("Student Addded Successfully");
+                    txt_Name.Text = "";
+                    txt_Password.Text = "";
+                }
             }
             else
             {
