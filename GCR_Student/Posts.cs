@@ -47,5 +47,17 @@ namespace GCR_Student
                 dr2.Close();
             }            
         }
+
+        public static int Count()
+        {
+            int c;
+            SqlCommand cmd1 = new SqlCommand("SELECT COUNT(Id) FROM Posts",
+             Connection.GetConnection());
+            SqlDataReader dr1 = cmd1.ExecuteReader();
+            dr1.Read();
+            c = Int32.Parse(dr1[0].ToString());
+            dr1.Close();
+            return c;
+        }
     }
 }

@@ -11,6 +11,7 @@ using System.Net.Sockets;
 using System.Net;
 using System.IO;
 using System.Threading;
+using SimpleTCP;
 
 namespace GCR_Student
 {
@@ -27,53 +28,37 @@ namespace GCR_Student
             this.Hide();
             tp.Show();
         }
-        List<TcpClient> Clients = new List<TcpClient>();
-        TcpListener server;
+        SimpleTcpServer server;
         private void button2_Click(object sender, EventArgs e)
         {
-            CheckForIllegalCrossThreadCalls = false;
-            server = new TcpListener(IPAddress.Loopback, 8001);
-            server.Start(10);
-            Thread t2 = new Thread(AcceptClient);
-            t2.Start();
+            txt_Chat.Text += "Server Starting..";
+            IPAddress ip = IPAddress.Parse("192.168.18.74");
+            server.Start(ip, 80);
         }
-
-        public void AcceptClient()
-        {
-            while (true)
-            {
-                TcpClient c = server.AcceptTcpClient();
-                Clients.Add(c);
-                Thread t = new Thread(asd => ReadMessage(c));
-                t.Start();
-
-            }
-        }
-
-        public void ReadMessage(TcpClient client)
-        {
-            while (true)
-            {
-                NetworkStream stream = client.GetStream();
-                StreamReader sdr = new StreamReader(stream);
-                string msg = sdr.ReadLine();
-                txt_Chat.AppendText(Environment.NewLine);
-                txt_Chat.AppendText("Student: " + msg);
-            }
-        }
-
+        
         private void btn_send_Click(object sender, EventArgs e)
         {
-            foreach (var item in Clients)
+            server.Broadcast(string.Format("\nTeacher: {0}", txt_Msg.Text));
+            txt_Chat.Text += Environment.NewLine;
+            txt_Chat.Text += string.Format("Teacher: {0}", txt_Msg.Text);
+        }
+
+        private void TeacherChat_Load(object sender, EventArgs e)
+        {
+            server = new SimpleTcpServer();
+            server.Delimiter = 0x13;
+            server.StringEncoder = Encoding.UTF8;
+            server.DataReceived += server_DataReceived;
+        }
+
+        public void server_DataReceived(object sender, SimpleTCP.Message e)
+        {
+            txt_Chat.Invoke((MethodInvoker)delegate ()
             {
-                txt_Chat.AppendText(Environment.NewLine);
-                txt_Chat.AppendText("Teacher: " + txt_Msg.Text);
-                NetworkStream stream = item.GetStream();
-                StreamWriter sdr = new StreamWriter(stream);
-                sdr.WriteLine(txt_Msg.Text);
-                sdr.Flush();
-                txt_Msg.Clear();
-            }
+                txt_Chat.Text += Environment.NewLine;
+                txt_Chat.Text += e.MessageString;
+                e.ReplyLine(e.MessageString);
+            });
         }
     }
 }

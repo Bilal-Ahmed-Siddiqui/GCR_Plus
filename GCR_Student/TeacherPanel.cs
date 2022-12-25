@@ -12,7 +12,7 @@ namespace GCR_Student
 {
     public partial class TeacherPanel : Form
     {
-        protected int counter = 1;
+        protected int counter = Posts.Count();
         public TeacherPanel()
         {
             InitializeComponent();
@@ -49,33 +49,33 @@ namespace GCR_Student
 
         private void btn_Next_Click(object sender, EventArgs e)
         {
-            Posts p1 = new Posts();
-            counter++;
-            p1.Search(counter);
-            if(counter <= p1.count)
+            counter--;
+
+            if ((counter <= Posts.Count()) && (counter > 0))
             {
+                Posts p1 = new Posts();
+                p1.Search(counter);
                 lbl_Title.Text = p1.title.ToString();
                 lbl_Description.Text = p1.description.ToString();
                 lbl_Datetime.Text = p1.dt.ToString();
             }
             else
             {
-                MessageBox.Show("No Next Post");
-                counter--;
+                MessageBox.Show("No Previous Post");
             }
-            
+
         }
 
         private void btn_previous_Click(object sender, EventArgs e)
         {
-            if (counter == 1)
+            if (counter == Posts.Count())
             {
-                MessageBox.Show("No Previous Post");
+                MessageBox.Show("No Next Post");
             }
             else
             {
                 Posts p1 = new Posts();
-                counter--;
+                counter++;
                 p1.Search(counter);
                 lbl_Title.Text = p1.title.ToString();
                 lbl_Description.Text = p1.description.ToString();

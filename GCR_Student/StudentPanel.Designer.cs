@@ -30,8 +30,8 @@ namespace GCR_Student
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_previous = new System.Windows.Forms.Button();
             this.btn_Next = new System.Windows.Forms.Button();
+            this.btn_Previous = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -51,25 +51,25 @@ namespace GCR_Student
             this.label1.TabIndex = 1;
             this.label1.Text = "Student panel";
             // 
-            // btn_previous
-            // 
-            this.btn_previous.Location = new System.Drawing.Point(43, 242);
-            this.btn_previous.Name = "btn_previous";
-            this.btn_previous.Size = new System.Drawing.Size(124, 55);
-            this.btn_previous.TabIndex = 26;
-            this.btn_previous.Text = "Previous";
-            this.btn_previous.UseVisualStyleBackColor = true;
-            this.btn_previous.Click += new System.EventHandler(this.btn_previous_Click);
-            // 
             // btn_Next
             // 
-            this.btn_Next.Location = new System.Drawing.Point(232, 242);
+            this.btn_Next.Location = new System.Drawing.Point(43, 242);
             this.btn_Next.Name = "btn_Next";
             this.btn_Next.Size = new System.Drawing.Size(124, 55);
-            this.btn_Next.TabIndex = 25;
+            this.btn_Next.TabIndex = 26;
             this.btn_Next.Text = "Next";
             this.btn_Next.UseVisualStyleBackColor = true;
-            this.btn_Next.Click += new System.EventHandler(this.btn_Next_Click);
+            this.btn_Next.Click += new System.EventHandler(this.btn_previous_Click);
+            // 
+            // btn_Previous
+            // 
+            this.btn_Previous.Location = new System.Drawing.Point(232, 242);
+            this.btn_Previous.Name = "btn_Previous";
+            this.btn_Previous.Size = new System.Drawing.Size(124, 55);
+            this.btn_Previous.TabIndex = 25;
+            this.btn_Previous.Text = "Previous";
+            this.btn_Previous.UseVisualStyleBackColor = true;
+            this.btn_Previous.Click += new System.EventHandler(this.btn_Next_Click);
             // 
             // label2
             // 
@@ -152,8 +152,8 @@ namespace GCR_Student
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btn_logout);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.btn_previous);
             this.Controls.Add(this.btn_Next);
+            this.Controls.Add(this.btn_Previous);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
@@ -173,8 +173,8 @@ namespace GCR_Student
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btn_previous;
         private System.Windows.Forms.Button btn_Next;
+        private System.Windows.Forms.Button btn_Previous;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;

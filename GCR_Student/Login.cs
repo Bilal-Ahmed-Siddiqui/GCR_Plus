@@ -75,5 +75,12 @@ namespace GCR_Student
         {
            
         }
+
+        private void txt_Name_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+  
     }
 }

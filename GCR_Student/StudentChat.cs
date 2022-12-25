@@ -11,6 +11,7 @@ using System.Net.Sockets;
 using System.Net;
 using System.IO;
 using System.Threading;
+using SimpleTCP;
 
 namespace GCR_Student
 {
@@ -27,39 +28,32 @@ namespace GCR_Student
             this.Hide();
             sp.Show();
         }
-        TcpClient Client = new TcpClient();
-
+        SimpleTcpClient client;
         private void btn_Start_Click(object sender, EventArgs e)
         {
-            CheckForIllegalCrossThreadCalls = false;
-            IPEndPoint point = new IPEndPoint(IPAddress.Loopback, 8002);
-            Client = new TcpClient(point);
-            Client.Connect(IPAddress.Loopback, 8001);
-            Thread t = new Thread(ReadMessage);
-            t.Start();
-        }
-
-        public void ReadMessage()
-        {
-            while (true)
-            {
-                NetworkStream stream = Client.GetStream();
-                StreamReader sdr = new StreamReader(stream);
-                string msg = sdr.ReadLine();
-                txt_Chat.AppendText(Environment.NewLine);
-                txt_Chat.AppendText("Teacher: " + msg);
-            }
+            btn_Start.Enabled = false;
+            client.Connect("192.168.18.74", 80);
         }
 
         private void btn_send_Click(object sender, EventArgs e)
         {
-            NetworkStream stream = Client.GetStream();
-            StreamWriter sdr = new StreamWriter(stream);
-            sdr.WriteLine(txt_Msg.Text);
-            sdr.Flush();
-            txt_Chat.AppendText(Environment.NewLine);
-            txt_Chat.AppendText("Student: " + txt_Msg.Text);
-            txt_Msg.Clear();
+            client.WriteLine(string.Format("Student: {0}", txt_Msg.Text));
+        }
+
+        private void StudentChat_Load(object sender, EventArgs e)
+        {
+            client = new SimpleTcpClient();
+            client.StringEncoder = Encoding.UTF8;
+            client.DataReceived += Client_DataRecieved;
+        }
+
+        public void Client_DataRecieved(object sender, SimpleTCP.Message e)
+        {
+            txt_Chat.Invoke((MethodInvoker)delegate ()
+            {
+                txt_Chat.Text += e.MessageString;
+                txt_Chat.Text += Environment.NewLine;
+            });
         }
     }
 }

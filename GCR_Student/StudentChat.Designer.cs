@@ -107,6 +107,7 @@ namespace GCR_Student
             this.Name = "StudentChat";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StudentChat";
+            this.Load += new System.EventHandler(this.StudentChat_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

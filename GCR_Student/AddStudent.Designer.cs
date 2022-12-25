@@ -61,6 +61,7 @@ namespace GCR_Student
             this.txt_Name.Name = "txt_Name";
             this.txt_Name.Size = new System.Drawing.Size(121, 20);
             this.txt_Name.TabIndex = 8;
+            this.txt_Name.TextChanged += new System.EventHandler(this.txt_Name_TextChanged);
             // 
             // label3
             // 

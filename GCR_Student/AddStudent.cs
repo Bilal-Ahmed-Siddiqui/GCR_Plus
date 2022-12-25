@@ -42,5 +42,10 @@ namespace GCR_Student
             this.Hide();
             tp.Show();
         }
+
+        private void txt_Name_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
