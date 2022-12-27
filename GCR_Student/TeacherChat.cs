@@ -49,6 +49,7 @@ namespace GCR_Student
             server.Delimiter = 0x13;
             server.StringEncoder = Encoding.UTF8;
             server.DataReceived += server_DataReceived;
+            txt_Msg.Focus();
         }
 
         public void server_DataReceived(object sender, SimpleTCP.Message e)

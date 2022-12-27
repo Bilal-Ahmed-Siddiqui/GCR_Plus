@@ -35,8 +35,6 @@ namespace GCR_Student
             this.txt_Msg = new System.Windows.Forms.TextBox();
             this.txt_Chat = new System.Windows.Forms.TextBox();
             this.btn_send = new System.Windows.Forms.Button();
-            this.cmbx_StudentList = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn_Start
@@ -82,7 +80,7 @@ namespace GCR_Student
             this.txt_Chat.Location = new System.Drawing.Point(12, 78);
             this.txt_Chat.Multiline = true;
             this.txt_Chat.Name = "txt_Chat";
-            this.txt_Chat.Size = new System.Drawing.Size(222, 237);
+            this.txt_Chat.Size = new System.Drawing.Size(325, 237);
             this.txt_Chat.TabIndex = 15;
             // 
             // btn_send
@@ -95,31 +93,11 @@ namespace GCR_Student
             this.btn_send.UseVisualStyleBackColor = true;
             this.btn_send.Click += new System.EventHandler(this.btn_send_Click);
             // 
-            // cmbx_StudentList
-            // 
-            this.cmbx_StudentList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbx_StudentList.FormattingEnabled = true;
-            this.cmbx_StudentList.Location = new System.Drawing.Point(240, 103);
-            this.cmbx_StudentList.Name = "cmbx_StudentList";
-            this.cmbx_StudentList.Size = new System.Drawing.Size(99, 21);
-            this.cmbx_StudentList.TabIndex = 20;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(260, 87);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 13);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "Student list";
-            // 
             // TeacherChat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(349, 391);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.cmbx_StudentList);
             this.Controls.Add(this.btn_Start);
             this.Controls.Add(this.btn_Back);
             this.Controls.Add(this.label1);
@@ -143,7 +121,5 @@ namespace GCR_Student
         private System.Windows.Forms.TextBox txt_Msg;
         private System.Windows.Forms.TextBox txt_Chat;
         private System.Windows.Forms.Button btn_send;
-        private System.Windows.Forms.ComboBox cmbx_StudentList;
-        private System.Windows.Forms.Label label2;
     }
 }

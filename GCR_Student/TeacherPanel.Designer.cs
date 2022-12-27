@@ -47,15 +47,15 @@ namespace GCR_Student
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(369, 59);
+            this.label1.Location = new System.Drawing.Point(54, 54);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 13);
+            this.label1.Size = new System.Drawing.Size(52, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Teaher panel";
+            this.label1.Text = "Welcome";
             // 
             // btn_AddStudents
             // 
-            this.btn_AddStudents.Location = new System.Drawing.Point(664, 123);
+            this.btn_AddStudents.Location = new System.Drawing.Point(398, 115);
             this.btn_AddStudents.Name = "btn_AddStudents";
             this.btn_AddStudents.Size = new System.Drawing.Size(124, 55);
             this.btn_AddStudents.TabIndex = 9;
@@ -65,7 +65,7 @@ namespace GCR_Student
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(664, 242);
+            this.button1.Location = new System.Drawing.Point(398, 176);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(124, 55);
             this.button1.TabIndex = 10;
@@ -155,7 +155,7 @@ namespace GCR_Student
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(664, 361);
+            this.button2.Location = new System.Drawing.Point(398, 237);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(124, 55);
             this.button2.TabIndex = 28;
@@ -165,7 +165,7 @@ namespace GCR_Student
             // 
             // btn_logout
             // 
-            this.btn_logout.Location = new System.Drawing.Point(664, 12);
+            this.btn_logout.Location = new System.Drawing.Point(398, 54);
             this.btn_logout.Name = "btn_logout";
             this.btn_logout.Size = new System.Drawing.Size(124, 55);
             this.btn_logout.TabIndex = 29;
@@ -178,7 +178,7 @@ namespace GCR_Student
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(548, 308);
             this.Controls.Add(this.btn_logout);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btn_Next);

@@ -29,7 +29,6 @@ namespace GCR_Student
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.btn_Next = new System.Windows.Forms.Button();
             this.btn_Previous = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,16 +39,8 @@ namespace GCR_Student
             this.lbl_Datetime = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.btn_logout = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(369, 66);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Student panel";
             // 
             // btn_Next
             // 
@@ -127,7 +118,7 @@ namespace GCR_Student
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(664, 257);
+            this.button1.Location = new System.Drawing.Point(400, 242);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(124, 55);
             this.button1.TabIndex = 27;
@@ -137,7 +128,7 @@ namespace GCR_Student
             // 
             // btn_logout
             // 
-            this.btn_logout.Location = new System.Drawing.Point(664, 12);
+            this.btn_logout.Location = new System.Drawing.Point(400, 12);
             this.btn_logout.Name = "btn_logout";
             this.btn_logout.Size = new System.Drawing.Size(124, 55);
             this.btn_logout.TabIndex = 30;
@@ -145,11 +136,21 @@ namespace GCR_Student
             this.btn_logout.UseVisualStyleBackColor = true;
             this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(48, 54);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(52, 13);
+            this.label5.TabIndex = 31;
+            this.label5.Text = "Welcome";
+            // 
             // StudentPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(537, 308);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btn_logout);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_Next);
@@ -160,7 +161,6 @@ namespace GCR_Student
             this.Controls.Add(this.lbl_Title);
             this.Controls.Add(this.lbl_Description);
             this.Controls.Add(this.lbl_Datetime);
-            this.Controls.Add(this.label1);
             this.Name = "StudentPanel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Student Panel";
@@ -171,8 +171,6 @@ namespace GCR_Student
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_Next;
         private System.Windows.Forms.Button btn_Previous;
         private System.Windows.Forms.Label label2;
@@ -183,5 +181,6 @@ namespace GCR_Student
         private System.Windows.Forms.Label lbl_Datetime;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btn_logout;
+        private System.Windows.Forms.Label label5;
     }
 }

@@ -45,6 +45,7 @@ namespace GCR_Student
             client = new SimpleTcpClient();
             client.StringEncoder = Encoding.UTF8;
             client.DataReceived += Client_DataRecieved;
+            txt_Msg.Focus();
         }
 
         public void Client_DataRecieved(object sender, SimpleTCP.Message e)
