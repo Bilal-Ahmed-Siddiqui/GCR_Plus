@@ -42,33 +42,36 @@ namespace GCR_Student
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(149, 91);
+            this.label1.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(140, 84);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 13);
+            this.label1.Size = new System.Drawing.Size(74, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "Login As:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(149, 188);
+            this.label2.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(140, 181);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 13);
+            this.label2.Size = new System.Drawing.Size(85, 18);
             this.label2.TabIndex = 1;
             this.label2.Text = "Password: ";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(149, 142);
+            this.label3.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(140, 135);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 13);
+            this.label3.Size = new System.Drawing.Size(55, 18);
             this.label3.TabIndex = 2;
             this.label3.Text = "Name:";
             // 
             // txt_Name
             // 
-            this.txt_Name.Location = new System.Drawing.Point(263, 142);
+            this.txt_Name.Location = new System.Drawing.Point(254, 135);
             this.txt_Name.Name = "txt_Name";
             this.txt_Name.Size = new System.Drawing.Size(121, 20);
             this.txt_Name.TabIndex = 3;
@@ -76,7 +79,7 @@ namespace GCR_Student
             // 
             // txt_Password
             // 
-            this.txt_Password.Location = new System.Drawing.Point(263, 185);
+            this.txt_Password.Location = new System.Drawing.Point(254, 178);
             this.txt_Password.Name = "txt_Password";
             this.txt_Password.PasswordChar = '*';
             this.txt_Password.Size = new System.Drawing.Size(121, 20);
@@ -84,31 +87,36 @@ namespace GCR_Student
             // 
             // btn_Login
             // 
-            this.btn_Login.Location = new System.Drawing.Point(213, 240);
+            this.btn_Login.BackColor = System.Drawing.Color.PaleGreen;
+            this.btn_Login.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Login.ForeColor = System.Drawing.Color.Black;
+            this.btn_Login.Location = new System.Drawing.Point(191, 229);
             this.btn_Login.Name = "btn_Login";
-            this.btn_Login.Size = new System.Drawing.Size(105, 39);
+            this.btn_Login.Size = new System.Drawing.Size(124, 53);
             this.btn_Login.TabIndex = 5;
             this.btn_Login.Text = "Login";
-            this.btn_Login.UseVisualStyleBackColor = true;
+            this.btn_Login.UseVisualStyleBackColor = false;
             this.btn_Login.Click += new System.EventHandler(this.btn_Login_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(210, 28);
+            this.label4.Font = new System.Drawing.Font("Georgia", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(131, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(96, 13);
+            this.label4.Size = new System.Drawing.Size(253, 34);
             this.label4.TabIndex = 7;
             this.label4.Text = "Welcome to GCR+";
             // 
             // cmb_Login
             // 
+            this.cmb_Login.BackColor = System.Drawing.SystemColors.Control;
             this.cmb_Login.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_Login.FormattingEnabled = true;
             this.cmb_Login.Items.AddRange(new object[] {
             "Teacher",
             "Student"});
-            this.cmb_Login.Location = new System.Drawing.Point(263, 88);
+            this.cmb_Login.Location = new System.Drawing.Point(254, 81);
             this.cmb_Login.Name = "cmb_Login";
             this.cmb_Login.Size = new System.Drawing.Size(121, 21);
             this.cmb_Login.TabIndex = 8;
@@ -117,6 +125,7 @@ namespace GCR_Student
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.MintCream;
             this.ClientSize = new System.Drawing.Size(516, 305);
             this.Controls.Add(this.cmb_Login);
             this.Controls.Add(this.label4);
