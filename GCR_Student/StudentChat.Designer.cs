@@ -32,13 +32,14 @@ namespace GCR_Student
             this.txt_Msg = new System.Windows.Forms.TextBox();
             this.txt_Chat = new System.Windows.Forms.TextBox();
             this.btn_send = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.btn_Back = new System.Windows.Forms.Button();
             this.btn_Start = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txt_Msg
             // 
+            this.txt_Msg.BackColor = System.Drawing.Color.MintCream;
             this.txt_Msg.Location = new System.Drawing.Point(10, 320);
             this.txt_Msg.Multiline = true;
             this.txt_Msg.Name = "txt_Msg";
@@ -48,6 +49,7 @@ namespace GCR_Student
             // 
             // txt_Chat
             // 
+            this.txt_Chat.BackColor = System.Drawing.Color.MintCream;
             this.txt_Chat.Location = new System.Drawing.Point(10, 77);
             this.txt_Chat.Multiline = true;
             this.txt_Chat.Name = "txt_Chat";
@@ -56,51 +58,56 @@ namespace GCR_Student
             // 
             // btn_send
             // 
+            this.btn_send.BackColor = System.Drawing.Color.Honeydew;
             this.btn_send.Location = new System.Drawing.Point(238, 320);
             this.btn_send.Name = "btn_send";
             this.btn_send.Size = new System.Drawing.Size(99, 60);
             this.btn_send.TabIndex = 6;
             this.btn_send.Text = "Send";
-            this.btn_send.UseVisualStyleBackColor = true;
+            this.btn_send.UseVisualStyleBackColor = false;
             this.btn_send.Click += new System.EventHandler(this.btn_send_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(125, 36);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 13);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Chat With Teacher";
             // 
             // btn_Back
             // 
+            this.btn_Back.BackColor = System.Drawing.Color.Honeydew;
             this.btn_Back.Location = new System.Drawing.Point(238, 12);
             this.btn_Back.Name = "btn_Back";
             this.btn_Back.Size = new System.Drawing.Size(99, 60);
             this.btn_Back.TabIndex = 12;
             this.btn_Back.Text = "Back";
-            this.btn_Back.UseVisualStyleBackColor = true;
+            this.btn_Back.UseVisualStyleBackColor = false;
             this.btn_Back.Click += new System.EventHandler(this.button1_Click);
             // 
             // btn_Start
             // 
+            this.btn_Start.BackColor = System.Drawing.Color.Honeydew;
             this.btn_Start.Location = new System.Drawing.Point(10, 11);
             this.btn_Start.Name = "btn_Start";
             this.btn_Start.Size = new System.Drawing.Size(99, 60);
             this.btn_Start.TabIndex = 13;
             this.btn_Start.Text = "Start";
-            this.btn_Start.UseVisualStyleBackColor = true;
+            this.btn_Start.UseVisualStyleBackColor = false;
             this.btn_Start.Click += new System.EventHandler(this.btn_Start_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(130, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(87, 23);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Chat Box";
             // 
             // StudentChat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.PaleGreen;
             this.ClientSize = new System.Drawing.Size(349, 387);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_Start);
             this.Controls.Add(this.btn_Back);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_Msg);
             this.Controls.Add(this.txt_Chat);
             this.Controls.Add(this.btn_send);
@@ -118,8 +125,8 @@ namespace GCR_Student
         private System.Windows.Forms.TextBox txt_Msg;
         private System.Windows.Forms.TextBox txt_Chat;
         private System.Windows.Forms.Button btn_send;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_Back;
         private System.Windows.Forms.Button btn_Start;
+        private System.Windows.Forms.Label label1;
     }
 }
