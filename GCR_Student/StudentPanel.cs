@@ -76,5 +76,10 @@ namespace GCR_Student
             this.Hide();
             l.Show();
         }
+
+        private void lbl_Datetime_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
