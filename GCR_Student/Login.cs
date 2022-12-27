@@ -27,6 +27,7 @@ namespace GCR_Student
 
         private void btn_Login_Click(object sender, EventArgs e)
         {
+            //check
             if (txt_Name.Text != "" && txt_Password.Text != "" && cmb_Login.Text != "")
             {
                 if (cmb_Login.Text == "Teacher")
