@@ -88,7 +88,7 @@ namespace GCR_Student
             // btn_Login
             // 
             this.btn_Login.BackColor = System.Drawing.Color.PaleGreen;
-            this.btn_Login.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Login.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Login.ForeColor = System.Drawing.Color.Black;
             this.btn_Login.Location = new System.Drawing.Point(191, 229);
             this.btn_Login.Name = "btn_Login";
