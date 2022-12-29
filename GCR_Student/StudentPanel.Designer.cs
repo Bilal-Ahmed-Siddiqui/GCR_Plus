@@ -38,6 +38,7 @@ namespace GCR_Student
             this.btn_logout = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_MailSend = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -142,12 +143,24 @@ namespace GCR_Student
             this.panel1.Size = new System.Drawing.Size(313, 115);
             this.panel1.TabIndex = 32;
             // 
+            // btn_MailSend
+            // 
+            this.btn_MailSend.BackColor = System.Drawing.Color.Honeydew;
+            this.btn_MailSend.Location = new System.Drawing.Point(343, 88);
+            this.btn_MailSend.Name = "btn_MailSend";
+            this.btn_MailSend.Size = new System.Drawing.Size(124, 55);
+            this.btn_MailSend.TabIndex = 33;
+            this.btn_MailSend.Text = "Send Mail";
+            this.btn_MailSend.UseVisualStyleBackColor = false;
+            this.btn_MailSend.Click += new System.EventHandler(this.btn_MailSend_Click);
+            // 
             // StudentPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MintCream;
             this.ClientSize = new System.Drawing.Size(479, 216);
+            this.Controls.Add(this.btn_MailSend);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btn_logout);
@@ -175,5 +188,6 @@ namespace GCR_Student
         private System.Windows.Forms.Button btn_logout;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btn_MailSend;
     }
 }

@@ -81,5 +81,12 @@ namespace GCR_Student
         {
 
         }
+
+        private void btn_MailSend_Click(object sender, EventArgs e)
+        {
+            SendMail sm = new SendMail();
+            this.Hide();
+            sm.Show();
+        }
     }
 }

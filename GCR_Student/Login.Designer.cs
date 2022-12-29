@@ -37,6 +37,7 @@ namespace GCR_Student
             this.cmb_Login = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.btn_Show = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -121,12 +122,24 @@ namespace GCR_Student
             this.label3.TabIndex = 2;
             this.label3.Text = "Name:";
             // 
+            // btn_Show
+            // 
+            this.btn_Show.BackColor = System.Drawing.Color.Honeydew;
+            this.btn_Show.Location = new System.Drawing.Point(381, 177);
+            this.btn_Show.Name = "btn_Show";
+            this.btn_Show.Size = new System.Drawing.Size(57, 20);
+            this.btn_Show.TabIndex = 36;
+            this.btn_Show.Text = "Show";
+            this.btn_Show.UseVisualStyleBackColor = false;
+            this.btn_Show.Click += new System.EventHandler(this.btn_Show_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MintCream;
             this.ClientSize = new System.Drawing.Size(516, 305);
+            this.Controls.Add(this.btn_Show);
             this.Controls.Add(this.cmb_Login);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btn_Login);
@@ -154,5 +167,6 @@ namespace GCR_Student
         private System.Windows.Forms.ComboBox cmb_Login;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btn_Show;
     }
 }

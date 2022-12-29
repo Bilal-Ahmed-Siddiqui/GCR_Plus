@@ -100,7 +100,21 @@ namespace GCR_Student
         {
             
         }
-
-  
+        int count = 0;
+        private void btn_Show_Click(object sender, EventArgs e)
+        {
+            if (count % 2 == 0)
+            {
+                count++;
+                txt_Password.PasswordChar = '\0';
+                btn_Show.Text = "Hide";
+            }
+            else
+            {
+                count++;
+                txt_Password.PasswordChar = '*';
+                btn_Show.Text = "Show";
+            }
+        }
     }
 }
