@@ -31,8 +31,14 @@ namespace GCR_Student
                     mm.Subject = txt_Subject.Text;
                     mm.Body = txt_body.Text;
                     sm.Port = 587;
-                    sm.Credentials = new System.Net.NetworkCredential("itsannatorres01@gmail.com", "uwibnjrqevprnvxw");
-                    //sm.Credentials = new System.Net.NetworkCredential(txt_mail.Text, txt_pass.Text);
+                    if (txt_mail.Text != "" && txt_pass.Text != "")
+                    {
+                        sm.Credentials = new System.Net.NetworkCredential(txt_mail.Text, txt_pass.Text);
+                    }
+                    else
+                    {
+                        sm.Credentials = new System.Net.NetworkCredential("itsannatorres01@gmail.com", "uwibnjrqevprnvxw");
+                    }
                     sm.EnableSsl = true;
                     sm.Send(mm);
 
